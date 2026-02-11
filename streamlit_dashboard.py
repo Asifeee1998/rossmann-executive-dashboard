@@ -33,7 +33,9 @@ st.markdown("---")
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("train.csv", parse_dates=["Date"])
+    url = "https://raw.githubusercontent.com/Asifee1998/rossmann-executive-dashboard/main/train_sample.csv"
+df = pd.read_csv(url, parse_dates=["Date"])
+
     return df
 
 data = load_data()
